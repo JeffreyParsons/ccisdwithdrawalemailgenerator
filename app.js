@@ -32,7 +32,7 @@ function generateEmail() {
     <p>Good ${timeofDay.value},</p>
     <p>Your student, ${studentName.value}, was withdrawn from ${campus.value} on ${withdrawalDate.value}.</p>
     <p>Our records indicate that ${studentName.value} has a district-issued device assigned to them, <strong>${serialNumber.value}</strong>. As a result, the $450 Technology Lost Device fee has been applied to their account in Skyward. Once this device and its charger are returned to your student's former campus, this fee will be removed.</p>
-    <p>If this device has already been turned in, please give us the date, location, and name of the person with whom this device was turned in.</p>
+    <p>If this device has already been turned in, please provide us with the date, location, and name of the person with whom this device was turned in.</p>
     <p>Please let us know if you have any questions. Thank you.</p>`
 
     return emailText;
@@ -67,7 +67,7 @@ function createEmail() {
         return;
     }
 
-    let emailBody = `Good ${timeofDay.value},%0A%0AYour student, ${studentName.value}, was withdrawn from ${campus.value} on ${withdrawalDate.value}.%0A%0AOur records indicate that ${studentName.value} has a district-issued device assigned to them, ${serialNumber.value}. As a result, the $450 Technology Lost Device fee has been applied to their account in Skyward. Once this device and its charger are returned to your student's former campus, this fee will be removed.%0A%0AIf this device has already been turned in, please give us the date, location, and name of the person with whom this device was turned in.%0A%0APlease let us know if you have any questions. Thank you.`;
+    let emailBody = `Good ${timeofDay.value},%0A%0AYour student, ${studentName.value}, was withdrawn from ${campus.value} on ${withdrawalDate.value}.%0A%0AOur records indicate that ${studentName.value} has a district-issued device assigned to them, ${serialNumber.value}. As a result, the $450 Technology Lost Device fee has been applied to their account in Skyward. Once this device and its charger are returned to your student's former campus, this fee will be removed.%0A%0AIf this device has already been turned in, please provide us with the date, location, and name of the person with whom this device was turned in.%0A%0APlease let us know if you have any questions. Thank you.`;
 
     // Opens default email application due to the "mailto:" part of the attribute
     location.href = `mailto:${parentEmail.value}?subject=${studentName.value} CCISD Laptop Not Returned&body=${emailBody}`;

@@ -13,11 +13,13 @@ let resetBtn = document.getElementById('reset');
 
 // Event listeners for the buttons
 button.addEventListener('click', generateAndUpdateUI);
+
 resetBtn.addEventListener('click', (e) => {
     clearInputValues();
     emailDiv.innerHTML = '';
     campus.value = '';
 });
+
 openInEmailBtn.addEventListener('click', (e)=> {
     createEmail();
     generateAndUpdateUI()
@@ -27,13 +29,9 @@ openInEmailBtn.addEventListener('click', (e)=> {
 function generateEmail() {
     let emailText = `
     <p>Good ${timeofDay.value},</p>
-
     <p>Your student, ${studentName.value}, was withdrawn from ${campus.value} on ${withdrawalDate.value}.</p>
-    
     <p>Our records indicate that ${studentName.value} has a district-issued device assigned to them, <strong>${serialNumber.value}</strong>. As a result, the $450 Technology Lost Device fee has been applied to their account in Skyward. Once this device and its charger are returned to your student's former campus, this fee will be removed.</p>
-    
     <p>If this device has already been turned in, please give us the date, location, and name of the person with whom this device was turned in.</p>
-    
     <p>Please let us know if you have any questions. Thank you.</p>`
 
     return emailText;

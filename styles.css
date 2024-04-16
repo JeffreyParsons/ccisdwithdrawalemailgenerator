@@ -1,0 +1,11 @@
+.button-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    
+}
+
+.reset {
+    align-self: flex-end;
+}

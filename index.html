@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Withdrawn Students Email Generator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+
+    <div class="container mb-5">
+
+        <h1 class="mb-4 mt-4">Withdrawn Student Email Generator</h1>
+
+        <div class="mb-5 info-section">
+            <div class="row">
+                <div class="col mb-3">
+                    <select name="campus" id="campus" class="form-select">
+                        <option selected value="">-- Select a Site --</option>
+                        <option value="Armand Bayou Elementary">Armand Bayou Elementary</option>
+                        <option value="Bauerschlag Elementary">Bauerschlag Elementary</option>
+                        <option value="Bay Elementary">Bay Elementary</option>
+                        <option value="Bayside Intermediate">Bayside Intermediate</option>
+                        <option value="Brookside Intermediate">Brookside Intermediate</option>
+                        <option value="Brookwood Elementary">Brookwood Elementary</option>
+                        <option value="Clear Brook High School">Clear Brook High School</option>
+                        <option value="Clear Creek High School">Clear Creek High School</option>
+                        <option value="Clear Creek Intermediate">Clear Creek Intermediate</option>
+                        <option value="Clear Falls High School">Clear Falls High School</option>
+                        <option value="Clear Horizons Early College High School">Clear Horizons Early College High School</option>
+                        <option value="Clear Lake City Elementary">Clear Lake City Elementary</option>
+                        <option value="Clear Lake High School">Clear Lake High School</option>
+                        <option value="Clear Lake Intermediate">Clear Lake Intermediate</option>
+                        <option value="Clear Path Alternative School">Clear Path Alternative School</option>
+                        <option value="Clear Springs High School">Clear Springs High School</option>
+                        <option value="Clear View High School">Clear View High School</option>
+                        <option value="Creekside Intermediate">Creekside Intermediate</option>
+                        <option value="Ed White Elementary">Ed White Elementary</option>
+                        <option value="Falcon Pass Elementary">Falcon Pass Elementary</option>
+                        <option value="Ferguson Elementary">Ferguson Elementary</option>
+                        <option value="Florence Campbell Elementary">Florence Campbell Elementary</option>
+                        <option value="Gilmore Elementary">Gilmore Elementary</option>
+                        <option value="Goforth Elementary">Goforth Elementary</option>
+                        <option value="Greene Elementary">Greene Elementary</option>
+                        <option value="Hall Elementary">Hall Elementary</option>
+                        <option value="Hyde Elementary">Hyde Elementary</option>
+                        <option value="Landolt Elementary">Landolt Elementary</option>
+                        <option value="League City Elementary">League City Elementary</option>
+                        <option value="League City Intermediate">League City Intermediate</option>
+                        <option value="McWhirter Elementary">McWhirter Elementary</option>
+                        <option value="Mossman Elementary">Mossman Elementary</option>
+                        <option value="North Pointe Elementary">North Pointe Elementary</option>
+                        <option value="Parr Elementary">Parr Elementary</option>
+                        <option value="Robinson Elementary">Robinson Elementary</option>
+                        <option value="Ross Elementary">Ross Elementary</option>
+                        <option value="Seabrook Intermediate">Seabrook Intermediate</option>
+                        <option value="Space Center Intermediate">Space Center Intermediate</option>
+                        <option value="Stewart Elementary">Stewart Elementary</option>
+                        <option value="Victory Lakes Intermediate">Victory Lakes Intermediate</option>
+                        <option value="Ward Elementary">Ward Elementary</option>
+                        <option value="Weber Elementary">Weber Elementary</option>
+                        <option value="Wedgewood Elementary">Wedgewood Elementary</option>
+                        <option value="Westbrook Intermediate">Westbrook Intermediate</option>
+                        <option value="Whitcomb Elementary">Whitcomb Elementary</option>
+                    </select>
+                </div>
+
+                <div class="col mb-3">
+                    <select name="timeOfDay" id="timeOfDay" class="form-select">
+                        <option value="morning">Good morning</option>
+                        <option value="afternoon">Good afternoon</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <div class="mb-3">
+                    <label class="form-label">Name:</label>
+                    <input id="name" class="form-control" type="text" />
+                </div>
+                
+                <div class="mb-3">
+                    <label class="form-label">Withdrawal Date:</label>
+                    <input id="date" class="form-control" type="text" />
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Serial Number:</label>
+                    <input id="sn" class="form-control" type="text" />
+                </div>
+
+                <label class="form-label">Email Address (optional):</label>
+                <input id="email" class="form-control" type="email" />
+            </div>
+            
+            <div class="button-row">
+                <div>
+                    <button id="button" class="btn btn-primary">Generate</button>
+                    <button id="open-email" class="btn btn-primary">Open in Email App</button>
+                </div>
+                <button id="reset" class="btn btn-primary">Reset</button>
+            </div>
+            
+        </div>
+        
+        <div class="email-section">
+            <h2 class="mb-3">Email:</h2>
+    
+            <p id="emailText"></p>
+        </div>
+    </div>
+
+<script src="./index.js"></script>
+</body>
+</html>
